@@ -18,5 +18,11 @@ class MatchesController < ActionController::Base
 		render json: {fulfilled_matches: fulfilled_matches}
 	end 
 
+	def show 
+    match = Match.find(params[:id])
 
+    messages = match.messages
+	end
+
+  
 end 
